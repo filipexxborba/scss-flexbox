@@ -1,0 +1,192 @@
+.container{
+    display: flex;
+    max-width: 960px;
+    margin: 0 auto;
+
+    @include device(phone){
+        flex-direction: column;
+        max-width: 300px;
+    }
+}
+
+.menu{
+    padding: 20px 0;
+
+    &-logo{
+        margin: 0 10px;
+        @include device(phone){
+            margin: 0px;
+        }
+    }
+}
+.menu-nav{
+    flex: 1;
+    align-self: center;
+    ul{
+        float: right;
+        display: flex;
+        list-style: none;
+        li{
+            a{
+                padding: 10px;
+                @include device(phone){
+                    padding-left: 0px;
+                }
+            }
+        }
+    }
+
+    @include device(phone){
+        margin: 0px;
+    }
+}
+
+.intro{
+    padding: 128px 0;
+    text-align: center;
+    h1{
+        &::after{
+            margin: 10px auto;
+        }
+    }
+    @include device(phone){
+        padding: 64px 0;
+    }
+}
+
+.sobre{
+    padding: 64px 0;
+    h2{
+        margin-bottom: 32px;
+        text-align: center;
+    }
+
+    &-item{
+        flex: 1;
+        margin: 0 8px;
+
+        img{
+            width: 100%;
+            display: block;
+        }
+        h3{
+            width: 220px;
+            padding: 5px 0 10px 0;
+
+            @include device(phone){
+                margin-bottom: 16px;
+            }
+        }
+    }
+    & > p{
+        margin: 32px auto;
+        max-width: 460px;
+        text-align: center;
+    }
+}
+
+.produtos{
+    padding: 60px 0;
+    h2{
+        text-align: center;
+        margin-bottom: 20px;
+
+        &::before{
+            margin: 20px auto;
+        }
+    }
+
+    &-btn{
+        width: 180px;
+        display: block;
+        padding: 15px 0;
+        margin: 20px auto 0 auto;
+    }
+
+    &-item{
+        margin: 0 10px 40px 10px;
+        flex: 1;
+    }
+}
+
+.locais{
+    padding: 60px 0;
+
+    &-item{
+        margin-bottom: 40px;
+
+        .imagens{
+            flex: 1;
+            margin: 0 10px;
+            img{
+                width: 100%;
+                display: block;
+            }
+        }
+        a{
+            padding: 10px 20px;
+        }
+    }
+    &-info{
+        flex: 1;
+        margin: 0 10px;
+        h2{
+            margin-bottom: 8px;
+        }
+        p{
+            max-width: 320px;
+            margin-bottom: 32px;
+        }
+    }
+}
+
+.assine{
+    padding: 30px 0;
+    
+    @include device(phone){
+        text-align: center;
+    }
+
+    &-info{
+        flex: 1;
+        margin: 0 10px;
+    }
+    
+    form{
+        @include device(phone){
+            margin-top: 8px;
+        }
+
+        display: flex;
+        flex: 1;
+        margin: 0 10px;
+        flex-wrap: wrap;
+        align-content: flex-start;
+    }
+    input{
+        text-indent: 8px;
+        flex: 1;
+        align-self: flex-start;
+        
+    }
+    button{
+        flex: 1;
+        align-self: flex-start;
+        padding: 4px;
+    }
+}
+
+.footer{
+    padding: 40px 0;
+
+    @include device(phone){
+        padding: 18px;
+        text-align: center;
+    }
+
+    p{
+        @include device(phone){
+            margin-bottom: 16px;
+        }
+    }
+}
